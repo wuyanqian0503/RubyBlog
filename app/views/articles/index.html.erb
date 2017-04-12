@@ -1,0 +1,6 @@
+<button><%= link_to 'New article', new_article_path %></button>
+<% @articles.each do |atc| %>
+  <p><strong><%= link_to atc.title , article_path(atc)%></strong></p>
+  <p style="margin-bottom:20px;"><%= atc.text%></p>
+  <p><%= link_to '编辑',edit_article_path(atc) %> </p>
+<% end %>
